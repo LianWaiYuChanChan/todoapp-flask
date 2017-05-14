@@ -8,7 +8,7 @@ To run a container for the application:
 
 ```docker build -t todoapp .```
 
-```docker run -d -p 5000:5000 --link postgresql:postgres --name todo todoapp```
+```docker run -d -p 5000:5000 -e 'APP_SETTINGS=config.StagingConfig' -e 'PYTHONPATH=/todoapp-flask' --link postgresql:postgres --name todo todoapp```
 
 Or, with docker-compose:
 
