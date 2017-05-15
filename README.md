@@ -13,3 +13,14 @@ To run a container for the application:
 Or, with docker-compose:
 
 ```docker-compose up```
+
+# Debug Tips
+## How to access postgres database using psql.
+* Step 1 -- Login to postgres container:  
+
+ ```docker exec -i -t postgresql /bin/bash```
+
+* Step 2 -- Login to postgres using psql.
+
+```psql -U admin -h 127.0.0.1 todo```
+
